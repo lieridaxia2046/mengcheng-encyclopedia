@@ -65,7 +65,7 @@ export const towns = [
   {
     name: '乐土镇',
     note: '位于县境中部偏南，地名寓意"安居乐业之土"。以农业生产为主，是蒙城中部重要的粮食生产基地。',
-    link: '/letu.html'
+    link: import.meta.env.BASE_URL + 'letu.html'
   },
   {
     name: '三义镇',

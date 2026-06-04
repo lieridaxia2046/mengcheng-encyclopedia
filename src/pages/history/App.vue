@@ -11,6 +11,7 @@ import { meta, timeline, keyFacts } from '../../data/history.js'
 import { useScrollReveal } from '../../composables/useScrollReveal.js'
 
 useScrollReveal()
+const base = import.meta.env.BASE_URL
 
 function getFirstSentence(text) {
   const match = text.match(/[^。！？]+[。！？]/)
@@ -61,11 +62,11 @@ function getFirstSentence(text) {
         <div class="card-grid-2">
           <InfoCard title="庄子" icon="📜">
             <p>道家学派创始人之一，蒙城是其故里。著有《庄子》（《南华经》），主张"逍遥""齐物"，对中国哲学影响深远。</p>
-            <a href="/culture.html" class="card-link">了解更多 →</a>
+            <a :href="base + 'culture.html'" class="card-link">了解更多 →</a>
           </InfoCard>
           <InfoCard title="嵇康" icon="🎵">
             <p>"竹林七贤"之一，相传出生于蒙城一带。精通音律，善弹琴赋诗，以不屈于司马氏政权而被后世景仰。</p>
-            <a href="/culture.html" class="card-link">了解更多 →</a>
+            <a :href="base + 'culture.html'" class="card-link">了解更多 →</a>
           </InfoCard>
         </div>
       </div>

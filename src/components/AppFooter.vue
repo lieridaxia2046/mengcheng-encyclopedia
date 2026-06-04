@@ -1,3 +1,7 @@
+<script setup>
+const base = import.meta.env.BASE_URL
+</script>
+
 <template>
   <footer class="app-footer">
     <div class="footer-inner">
@@ -11,17 +15,17 @@
       <div class="footer-links">
         <div class="footer-col">
           <h4>内容板块</h4>
-          <a href="/history.html">历史沿革</a>
-          <a href="/geography.html">地理环境</a>
-          <a href="/culture.html">文化传承</a>
-          <a href="/tourism.html">旅游景点</a>
+          <a :href="base + 'history.html'">历史沿革</a>
+          <a :href="base + 'geography.html'">地理环境</a>
+          <a :href="base + 'culture.html'">文化传承</a>
+          <a :href="base + 'tourism.html'">旅游景点</a>
         </div>
         <div class="footer-col">
           <h4>更多</h4>
-          <a href="/cuisine.html">美食特产</a>
-          <a href="/economy.html">经济发展</a>
-          <a href="/admin.html">行政区划</a>
-          <a href="/">返回首页</a>
+          <a :href="base + 'cuisine.html'">美食特产</a>
+          <a :href="base + 'economy.html'">经济发展</a>
+          <a :href="base + 'admin.html'">行政区划</a>
+          <a :href="base">返回首页</a>
         </div>
       </div>
     </div>

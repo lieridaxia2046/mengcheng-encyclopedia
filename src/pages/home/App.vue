@@ -15,14 +15,15 @@ import { useScrollReveal } from '../../composables/useScrollReveal.js'
 useScrollReveal()
 
 const activeTab = ref('explore')
+const base = import.meta.env.BASE_URL
 
 const infoCards = [
-  { title: '历史沿革', icon: '📜', desc: '从尉迟寺遗址到千年古县，跨越 4500 年的文明脉络。', link: '/history.html' },
-  { title: '地理环境', icon: '🌏', desc: '淮北平原中部，涡河之畔，暖温带半湿润季风气候。', link: '/geography.html' },
-  { title: '文化传承', icon: '🎭', desc: '庄子故里，楹联之乡，非遗剪纸与万佛塔辉映千年文脉。', link: '/culture.html' },
-  { title: '旅游景点', icon: '🏯', desc: '庄子祠、万佛塔、博物馆……年接待游客超 900 万人次。', link: '/tourism.html' },
-  { title: '美食特产', icon: '🍜', desc: '油酥烧饼、九龙贡面、五洲牛肉干，地道皖北风味。', link: '/cuisine.html' },
-  { title: '经济发展', icon: '📊', desc: 'GDP 577.7 亿元，三大主导产业驱动皖北崛起。', link: '/economy.html' }
+  { title: '历史沿革', icon: '📜', desc: '从尉迟寺遗址到千年古县，跨越 4500 年的文明脉络。', link: base + 'history.html' },
+  { title: '地理环境', icon: '🌏', desc: '淮北平原中部，涡河之畔，暖温带半湿润季风气候。', link: base + 'geography.html' },
+  { title: '文化传承', icon: '🎭', desc: '庄子故里，楹联之乡，非遗剪纸与万佛塔辉映千年文脉。', link: base + 'culture.html' },
+  { title: '旅游景点', icon: '🏯', desc: '庄子祠、万佛塔、博物馆……年接待游客超 900 万人次。', link: base + 'tourism.html' },
+  { title: '美食特产', icon: '🍜', desc: '油酥烧饼、九龙贡面、五洲牛肉干，地道皖北风味。', link: base + 'cuisine.html' },
+  { title: '经济发展', icon: '📊', desc: 'GDP 577.7 亿元，三大主导产业驱动皖北崛起。', link: base + 'economy.html' }
 ]
 
 const quickFacts = [
@@ -40,7 +41,7 @@ const highlights = [
   { title: '皖北崛起新星', body: '2025 年 GDP 达 577.7 亿元，十四五期间连跨两个百亿台阶。汽车装备、食品加工、新型建材三大主导产业蓬勃发展。' }
 ]
 
-const heroImage = { src: '/images/蒙城县地图-政区版.jpg', alt: '蒙城县政区图', source: '蒙城县人民政府' }
+const heroImage = { src: base + 'images/蒙城县地图-政区版.jpg', alt: '蒙城县政区图', source: '蒙城县人民政府' }
 </script>
 
 <template>
@@ -114,7 +115,7 @@ const heroImage = { src: '/images/蒙城县地图-政区版.jpg', alt: '蒙城�
             </InfoCard>
           </div>
           <p style="text-align:center;margin-top:var(--space-lg)">
-            <a href="/admin.html" class="body-text">查看完整行政区划 →</a>
+            <a :href="base + 'admin.html'" class="body-text">查看完整行政区划 →</a>
           </p>
         </div>
       </div>

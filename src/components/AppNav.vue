@@ -5,15 +5,16 @@ defineProps({
   currentPage: { type: String, default: 'home' }
 })
 
+const base = import.meta.env.BASE_URL
 const navItems = [
-  { id: 'home', label: '首页', path: '/' },
-  { id: 'history', label: '历史沿革', path: '/history.html' },
-  { id: 'geography', label: '地理环境', path: '/geography.html' },
-  { id: 'culture', label: '文化传承', path: '/culture.html' },
-  { id: 'tourism', label: '旅游景点', path: '/tourism.html' },
-  { id: 'cuisine', label: '美食特产', path: '/cuisine.html' },
-  { id: 'economy', label: '经济发展', path: '/economy.html' },
-  { id: 'admin', label: '行政区划', path: '/admin.html' }
+  { id: 'home', label: '首页', path: base },
+  { id: 'history', label: '历史沿革', path: base + 'history.html' },
+  { id: 'geography', label: '地理环境', path: base + 'geography.html' },
+  { id: 'culture', label: '文化传承', path: base + 'culture.html' },
+  { id: 'tourism', label: '旅游景点', path: base + 'tourism.html' },
+  { id: 'cuisine', label: '美食特产', path: base + 'cuisine.html' },
+  { id: 'economy', label: '经济发展', path: base + 'economy.html' },
+  { id: 'admin', label: '行政区划', path: base + 'admin.html' }
 ]
 
 const menuOpen = ref(false)
@@ -22,7 +23,7 @@ const menuOpen = ref(false)
 <template>
   <nav class="app-nav">
     <div class="nav-inner">
-      <a href="/" class="nav-brand">
+      <a :href="base" class="nav-brand">
         <span class="brand-mark">蒙</span>
         <span class="brand-text">蒙城百科</span>
       </a>

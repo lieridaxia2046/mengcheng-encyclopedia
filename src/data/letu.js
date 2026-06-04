@@ -1,4 +1,4 @@
-import { placeholder } from '../utils/placeholders.js'
+const base = import.meta.env.BASE_URL
 
 export const meta = {
   title: '乐土镇 — 蒙城县百科全书',
@@ -7,7 +7,7 @@ export const meta = {
 }
 
 export const overview = {
-  image: { src: '/images/乐土镇.webp', alt: '乐土镇地图', source: '百度百科' },
+  image: { src: base + 'images/乐土镇.webp', alt: '乐土镇地图', source: '百度百科' },
   location: '蒙城县东南部，东邻蚌埠市怀远县，南靠立仓镇，西连楚村镇，北接城关街道、漆园街道',
   area: '134 平方千米',
   population: '约 5.8 万人',

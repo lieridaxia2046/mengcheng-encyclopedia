@@ -1,4 +1,4 @@
-import { placeholder } from '../utils/placeholders.js'
+const base = import.meta.env.BASE_URL
 
 export const meta = {
   title: '历史沿革 — 蒙城县百科全书',
@@ -10,7 +10,7 @@ export const timeline = [
   {
     period: '远古时期',
     body: '尉迟寺遗址（约 4500 年前）是大汶口文化晚期的重要聚落遗址，被誉为"中华原始第一村"，为全国重点文物保护单位。遗址总面积约 10 万平方米，出土房屋遗迹、墓葬、灰坑等数百处，揭示了淮北地区史前先民的定居生活与社会组织形态。考古发现表明，当时已有较为成熟的农业生产和手工业分工。',
-    image: { src: '/images/尉迟寺聚落复原示意图.png', alt: '尉迟寺聚落复原示意图', source: '安徽新媒体集团徽风皖韵工作室' }
+    image: { src: base + 'images/尉迟寺聚落复原示意图.png', alt: '尉迟寺聚落复原示意图', source: '安徽新媒体集团徽风皖韵工作室' }
   },
   {
     period: '夏商周',
@@ -23,7 +23,7 @@ export const timeline = [
   {
     period: '三国两晋',
     body: '三国时期，蒙城一带属曹魏豫州。西晋短暂统一后，"八王之乱"引发北方动荡。竹林七贤之一的嵇康相传出生于谯郡铚县（今蒙城附近一带），蒙城至今建有嵇康亭以纪念这位旷达名士。东晋十六国时期，此地先后为多个政权所据。',
-    image: { src: '/images/嵇康亭.png', alt: '嵇康亭', source: '抖音百科' }
+    image: { src: base + 'images/嵇康亭.png', alt: '嵇康亭', source: '抖音百科' }
   },
   {
     period: '南北朝',
@@ -40,7 +40,7 @@ export const timeline = [
   {
     period: '宋金元',
     body: '两宋时期，蒙城先后隶属于安丰军、亳州、寿州等行政区。北宋年间修建的万佛塔至今屹立，塔身内外嵌砌琉璃小佛近万尊，成为蒙城标志性古建筑。宋金对峙时期，蒙城地处边境前沿，屡经战火。元代属安丰路，社会经济在战乱后逐步恢复。',
-    image: { src: '/images/万佛塔.jpg', alt: '万佛塔', source: '维基百科用户MNXANL' }
+    image: { src: base + 'images/万佛塔.jpg', alt: '万佛塔', source: '维基百科用户MNXANL' }
   },
   {
     period: '明清',
@@ -49,7 +49,7 @@ export const timeline = [
   {
     period: '近代革命',
     body: '辛亥革命前后，蒙城志士积极参与反清斗争。抗日战争时期，蒙城是新四军第四师的重要活动区域。1940 年板桥集战斗中，彭雪枫将军指挥部队伏击日军，歼敌数百人，极大鼓舞了皖北军民的抗战士气。解放战争中，蒙城于 1948 年获得解放。',
-    image: { src: '/images/板桥集战斗纪念馆.webp', alt: '板桥集战斗纪念馆', source: '百度百科' }
+    image: { src: base + 'images/板桥集战斗纪念馆.webp', alt: '板桥集战斗纪念馆', source: '百度百科' }
   },
   {
     period: '民国至今',

@@ -1,4 +1,4 @@
-import { placeholder } from '../utils/placeholders.js'
+const base = import.meta.env.BASE_URL
 
 export const meta = {
   title: '文化传承 — 蒙城县百科全书',
@@ -28,7 +28,7 @@ export const heritage = [
     type: '新石器时代遗址',
     level: '全国重点文物保护单位',
     note: '"中华原始第一村"，大汶口文化晚期聚落遗址。总面积约 10 万平方米，发现房址 70 余间、墓葬 200 余座，出土陶器、石器、骨器等文物数千件，为研究淮北地区史前文明提供了珍贵实物资料。',
-    image: { src: '/images/尉迟寺遗址.webp', alt: '尉迟寺遗址', source: '百度百科' }
+    image: { src: base + 'images/尉迟寺遗址.webp', alt: '尉迟寺遗址', source: '百度百科' }
   },
   {
     name: '万佛塔',
@@ -36,7 +36,7 @@ export const heritage = [
     type: '古建筑',
     level: '全国重点文物保护单位',
     note: '八角十一层楼阁式砖塔，高 36.5 米。塔身内外嵌砌赭、黄、绿三色琉璃小佛近万尊，造型端庄精美，是安徽省现存最古老的砖塔之一，也是研究宋代佛教艺术与建筑技术的珍贵实例。',
-    image: { src: '/images/万佛塔.jpg', alt: '蒙城万佛塔', source: '维基百科用户MNXANL' }
+    image: { src: base + 'images/万佛塔.jpg', alt: '蒙城万佛塔', source: '维基百科用户MNXANL' }
   },
   {
     name: '文庙',
@@ -51,7 +51,7 @@ export const heritage = [
     type: '纪念建筑',
     level: '',
     note: '纪念魏晋名士嵇康的亭台建筑。嵇康为"竹林七贤"之一，崇尚老庄，精通音律，以不屈于司马氏政权而被后世景仰。亭内有碑刻记述嵇康生平事迹，是蒙城人追慕魏晋风骨的文化地标。',
-    image: { src: '/images/嵇康亭.png', alt: '嵇康亭', source: '抖音百科' }
+    image: { src: base + 'images/嵇康亭.png', alt: '嵇康亭', source: '抖音百科' }
   },
   {
     name: '马公府',
@@ -59,7 +59,7 @@ export const heritage = [
     type: '古建筑',
     level: '',
     note: '晚清一品武将马玉昆府邸。马玉昆（1838—1908），蒙城人，官至直隶提督，在甲午战争中血战平壤，庚子之变中率军抗击八国联军，是晚清著名的爱国将领。府邸建筑精美，保存较好。',
-    image: { src: '/images/马公府.webp', alt: '马公府', source: '百度百科' }
+    image: { src: base + 'images/马公府.webp', alt: '马公府', source: '百度百科' }
   }
 ]
 

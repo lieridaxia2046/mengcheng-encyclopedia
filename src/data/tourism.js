@@ -1,4 +1,4 @@
-import { placeholder } from '../utils/placeholders.js'
+const base = import.meta.env.BASE_URL
 
 export const meta = {
   title: '旅游景点 — 蒙城县百科全书',
@@ -21,7 +21,7 @@ export const attractions = [
     category: '历史古迹',
     featured: true,
     description: '仿汉代建筑群，国家 AAA 级景区，位于蒙城县城南庄周街道境内。祠内主要建筑包括梦蝶楼、南华经阁、观鱼台、逍遥堂等，布局庄重典雅，古木参天。庄子祠是纪念道家学派创始人之一庄子的专祠，每年举办庄子文化周等活动，吸引海内外学者和游客前来朝圣。祠内碑廊刻有《庄子》名篇，是感受道家文化底蕴的绝佳去处。',
-    image: { src: '/images/庄子祠.webp', alt: '庄子祠', source: '百度百科' }
+    image: { src: base + 'images/庄子祠.webp', alt: '庄子祠', source: '百度百科' }
   },
   {
     name: '万佛塔',
@@ -30,7 +30,7 @@ export const attractions = [
     category: '历史古迹',
     featured: true,
     description: '北宋古建筑，全国重点文物保护单位。八角十一层楼阁式砖塔，高 36.5 米，塔身内外嵌砌赭、黄、绿三色琉璃小佛近万尊，造型端庄精美，阳光下熠熠生辉。万佛塔是安徽省现存最古老的砖塔之一，也是蒙城的标志性建筑和城市名片，历经千年风雨仍巍然屹立。',
-    image: { src: '/images/万佛塔.jpg', alt: '蒙城万佛塔', source: '维基百科用户MNXANL' }
+    image: { src: base + 'images/万佛塔.jpg', alt: '蒙城万佛塔', source: '维基百科用户MNXANL' }
   },
   {
     name: '蒙城博物馆',
@@ -38,7 +38,7 @@ export const attractions = [
     level: '',
     category: '历史古迹',
     description: '以青铜礼器方樽和汉阙为造型的现代博物馆，外观庄重大气，寓意蒙城深厚的历史文化底蕴。馆内设有历史沿革、文物精品、庄子文化、民俗风情等多个展厅，馆藏文物涵盖新石器时代至近现代，其中尉迟寺遗址出土文物和汉代青铜器为镇馆之宝。免费向公众开放。',
-    image: { src: '/images/蒙城县博物馆.webp', alt: '蒙城博物馆', source: '百度百科' }
+    image: { src: base + 'images/蒙城县博物馆.webp', alt: '蒙城博物馆', source: '百度百科' }
   },
   {
     name: '尉迟寺遗址',
@@ -47,7 +47,7 @@ export const attractions = [
     category: '历史古迹',
     featured: true,
     description: '被誉为"中国原始第一村"，距今约 4500 年，是大汶口文化晚期至龙山文化早期的大型聚落遗址，全国重点文物保护单位。遗址位于许疃镇，总面积约 10 万平方米，已发掘出成排的房屋基址、墓葬群、灰坑和大量陶器、石器、骨器。遗址的发现对研究淮北地区史前文明的起源与发展具有里程碑意义。',
-    image: { src: '/images/尉迟寺遗址.webp', alt: '尉迟寺遗址', source: '百度百科' }
+    image: { src: base + 'images/尉迟寺遗址.webp', alt: '尉迟寺遗址', source: '百度百科' }
   },
   {
     name: '九鼎灵山寺',
@@ -55,7 +55,7 @@ export const attractions = [
     level: '',
     category: '历史古迹',
     description: '位于小涧镇狼山之巅，始建于唐贞观年间，距今已有近 1400 年历史，为皖北著名佛教寺院。寺院依山而建，环境清幽，古树参天。相传唐代高僧曾在此弘法，鼎盛时期僧侣众多、香火旺盛。现存大殿、钟鼓楼等建筑，是信众朝拜和游客登山揽胜的好去处。',
-    image: { src: '/images/九鼎灵山寺.webp', alt: '九鼎灵山寺', source: '百度百科' }
+    image: { src: base + 'images/九鼎灵山寺.webp', alt: '九鼎灵山寺', source: '百度百科' }
   },
   {
     name: '板桥集战斗纪念馆·雪枫公园',
@@ -63,7 +63,7 @@ export const attractions = [
     level: '国家 AAA 级景区',
     category: '红色记忆',
     description: '国家 AAA 级红色旅游景区，位于板桥集镇。1940 年，新四军第四师师长彭雪枫率部在板桥集伏击日伪军，取得重大胜利。纪念馆通过实物、照片和场景复原，生动再现了那场惨烈而英勇的战斗。雪枫公园内有彭雪枫将军塑像、烈士纪念碑等，是安徽省重要的爱国主义教育基地。',
-    image: { src: '/images/板桥集战斗纪念馆.webp', alt: '板桥集战斗纪念馆', source: '百度百科' }
+    image: { src: base + 'images/板桥集战斗纪念馆.webp', alt: '板桥集战斗纪念馆', source: '百度百科' }
   },
   {
     name: '马公府',
@@ -71,7 +71,7 @@ export const attractions = [
     level: '',
     category: '历史古迹',
     description: '晚清一品当朝马玉昆的府邸，位于蒙城县城内。马玉昆（1838—1908），蒙城人，官至直隶提督，曾在甲午战争中率部血战平壤，在庚子之变中指挥抗击八国联军，是晚清著名的爱国将领。府邸为清代典型的官宦宅第，建筑精美，木雕砖雕工艺精湛，保存较为完好。',
-    image: { src: '/images/马公府.webp', alt: '马公府', source: '百度百科' }
+    image: { src: base + 'images/马公府.webp', alt: '马公府', source: '百度百科' }
   },
   {
     name: '蒙城县文庙',
@@ -79,7 +79,7 @@ export const attractions = [
     level: '',
     category: '历史古迹',
     description: '又称孔庙，是蒙城历代尊孔崇儒、兴办教育的重要场所。现存大成殿等建筑，飞檐翘角，古朴庄重。文庙体现了传统儒家文化在皖北地区的深远影响，历史上曾是蒙城最高学府所在地。每逢高考季，仍有考生和家长前来祈福。',
-    image: { src: '/images/蒙城县文庙.webp', alt: '蒙城县文庙', source: '百度百科' }
+    image: { src: base + 'images/蒙城县文庙.webp', alt: '蒙城县文庙', source: '百度百科' }
   },
   {
     name: '秋水园民宿',
@@ -87,7 +87,7 @@ export const attractions = [
     level: '皖美金牌民宿',
     category: '民俗体验',
     description: '皖美金牌民宿，以庄子《秋水》篇命名。民宿融合庄子哲学意象与徽派建筑美学，白墙黛瓦、庭院深深。客房以《庄子》篇章命名，内部陈设兼具古典韵味与现代舒适。提供茶道、书法、太极等文化体验项目，是"逍遥蒙城"文旅品牌的重要载体。',
-    image: { src: '/images/秋水园民宿.png', alt: '秋水园民宿', source: '新华社客户端安徽频道' }
+    image: { src: base + 'images/秋水园民宿.png', alt: '秋水园民宿', source: '新华社客户端安徽频道' }
   },
   {
     name: '嵇康亭',
@@ -95,7 +95,7 @@ export const attractions = [
     level: '',
     category: '历史古迹',
     description: '纪念魏晋名士嵇康的亭台，位于涡河之畔。嵇康（224—263 年），"竹林七贤"之一，精通音律，善弹琴赋诗，以不屈权贵的风骨为后世敬仰。亭内有碑刻记述嵇康生平，四周绿树环绕，是市民凭吊先贤、休闲散步的文化景点。',
-    image: { src: '/images/嵇康亭.png', alt: '嵇康亭', source: '抖音百科' }
+    image: { src: base + 'images/嵇康亭.png', alt: '嵇康亭', source: '抖音百科' }
   },
   {
     name: '北淝河国家湿地公园',
@@ -103,7 +103,7 @@ export const attractions = [
     level: '',
     category: '自然生态',
     description: '位于蒙城县板桥集镇，是国家级湿地公园。公园以北淝河湿地生态系统为核心，集湿地保护、科普教育、生态旅游于一体。园内水域辽阔、芦苇摇曳、鸟类众多，设有观鸟台、木栈道和科普展馆，是蒙城及周边市民亲近自然、休闲观光的好去处。',
-    image: { src: '/images/北淝河湿地公园.webp', alt: '北淝河国家湿地公园', source: '百度百科' }
+    image: { src: base + 'images/北淝河湿地公园.webp', alt: '北淝河国家湿地公园', source: '百度百科' }
   },
   {
     name: '蒙城烈士陵园',
@@ -111,6 +111,6 @@ export const attractions = [
     level: '',
     category: '红色记忆',
     description: '安葬和纪念在抗日战争、解放战争中牺牲的蒙城籍革命烈士。陵园内有烈士纪念碑、纪念墙和墓区，松柏苍翠、庄严肃穆。每年清明节和烈士纪念日，社会各界前来祭扫缅怀，是蒙城重要的爱国主义教育基地。',
-    image: { src: '/images/蒙城烈士陵园.webp', alt: '蒙城烈士陵园', source: '百度百科' }
+    image: { src: base + 'images/蒙城烈士陵园.webp', alt: '蒙城烈士陵园', source: '百度百科' }
   }
 ]
