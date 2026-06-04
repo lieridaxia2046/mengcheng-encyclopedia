@@ -8,7 +8,7 @@ import SectionBanner from '../../components/SectionBanner.vue'
 import DataTable from '../../components/DataTable.vue'
 import QuoteBlock from '../../components/QuoteBlock.vue'
 import TabSwitcher from '../../components/TabSwitcher.vue'
-import ImageFigure from '../../components/ImageFigure.vue'
+
 import BackToTop from '../../components/BackToTop.vue'
 import { ref } from 'vue'
 import { useScrollReveal } from '../../composables/useScrollReveal.js'
@@ -48,12 +48,6 @@ const activeTab = ref('heritage')
     <section class="section-dark scroll-reveal">
       <div class="page-container">
         <SectionBanner title="文物古迹" seal-text="遗产" />
-        <div class="heritage-images">
-          <figure v-for="h in heritage.filter(h => h.image)" :key="h.name" class="heritage-fig">
-            <img :src="h.image.src" :alt="h.image.alt" />
-            <figcaption class="caption">图片来源：{{ h.image.source }}</figcaption>
-          </figure>
-        </div>
         <DarkCard>
           <DataTable :headers="heritageHeaders" :rows="heritageRows" />
         </DarkCard>
@@ -91,18 +85,21 @@ const activeTab = ref('heritage')
           </div>
         </div>
         <div v-show="activeTab === 'people'">
-          <div class="card-grid-2">
-            <InfoCard v-for="p in people" :key="p.name" :title="p.name" :icon="p.identity === '哲学家、文学家' ? '📜' : p.identity === '思想家、音乐家、文学家' ? '🎵' : p.identity === '军事将领' ? '⚔️' : p.identity === '农民起义领袖' ? '🏴' : '🎖️'">
-              <ImageFigure v-if="p.image" :caption="'图片来源：' + p.image.source">
-                <img :src="p.image.src" :alt="p.image.alt" />
-              </ImageFigure>
-              <p class="people-era">{{ p.era }} · {{ p.title }}</p>
-              <p>{{ p.description }}</p>
+          <div class="people-grid">
+            <div v-for="p in people" :key="p.name" class="people-card">
+              <div class="people-header">
+                <span class="people-icon">{{ p.identity === '哲学家、文学家' ? '📜' : p.identity === '思想家、音乐家、文学家' ? '🎵' : p.identity === '军事将领' ? '⚔️' : p.identity === '农民起义领袖' ? '🏴' : '🎖️' }}</span>
+                <div>
+                  <h3 class="people-name">{{ p.name }}</h3>
+                  <span class="people-meta">{{ p.era }} · {{ p.title }}</span>
+                </div>
+              </div>
+              <p class="people-desc">{{ p.description }}</p>
               <blockquote v-if="p.quote" class="people-quote">
                 <p>"{{ p.quote.text }}"</p>
                 <footer>— {{ p.quote.source }}</footer>
               </blockquote>
-            </InfoCard>
+            </div>
           </div>
         </div>
       </div>
@@ -144,35 +141,53 @@ const activeTab = ref('heritage')
   background: var(--color-surface-card);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   font-family: var(--font-quote);
-  font-size: var(--text-body-sm);
+  font-size: 16px;
   color: var(--color-muted);
+  line-height: 1.8;
 }
 .people-quote footer {
   margin-top: 4px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-muted-soft);
 }
-.heritage-images {
+.people-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
 }
-.heritage-fig {
-  margin: 0;
+.people-card {
+  background: var(--color-surface-card);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  padding: var(--space-lg);
   border: 1px solid var(--color-hairline);
-  background: var(--color-surface-cream-strong);
 }
-.heritage-fig img {
-  width: 100%;
-  max-height: 280px;
-  object-fit: contain;
-  display: block;
+.people-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
-.heritage-fig figcaption {
-  padding: var(--space-xs) var(--space-sm);
-  text-align: center;
+.people-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+.people-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-ink);
+  margin: 0;
+}
+.people-meta {
+  font-size: var(--text-caption);
+  color: var(--color-muted);
+}
+.people-desc {
+  font-size: var(--text-body-sm);
+  color: var(--color-body);
+  line-height: 1.7;
+}
+@media (max-width: 767px) {
+  .people-grid { grid-template-columns: 1fr; }
 }
 </style>
